@@ -3,26 +3,23 @@ import Logo from "./logo.png";
 
 function Footer() {
   return (
-    <footer className="bg-white sm:p-6 dark:bg-gray-900">
-      <div className="md:flex mb-8">
-        <div className="mb-2">
-          <div className="flex items-center">
-            <img src={Logo} className="h-12 mr-3" alt="Pwdport Logo" />
-            <span className="self-center text-4xl font-semibold whitespace-nowrap dark:text-white">
-              Pwdport
-            </span>
-          </div>
-        </div>
+    <footer className="w-full bg-gray-900 p-4 h-[23vh] 2xl:h-[16vh]">
+      <div className="flex items-center">
+        <img src={Logo} className="h-12 mr-3" alt="Pwdport Logo" />
+        <span className="self-center text-4xl font-semibold whitespace-nowrap text-white">
+          Pwdport
+        </span>
       </div>
-      <hr className="mb-2 border border-gray-700" />
-      <div className="sm:flex sm:items-end sm:justify-between">
-        <span className="text-md text-gray-500 dark:text-gray-400">
+      <hr className="my-6 border border-gray-700" />
+      <div className="flex justify-between">
+        <span className="text-md text-gray-400">
           ▚ This site does not store any information that you enter.
         </span>
 
-        <div className="flex space-x-4 sm:justify-end">
+        <div className="flex space-x-4 justify-end">
           <a
             href="https://twitter.com/0xmimiQ"
+            rel="noreferrer"
             target="_blank"
             className="text-gray-500 hover:text-white"
           >
@@ -38,6 +35,7 @@ function Footer() {
           </a>
           <a
             href="https://github.com/0xmimiQ"
+            rel="noreferrer"
             target="_blank"
             className="text-gray-500 hover:text-white"
           >

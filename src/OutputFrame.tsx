@@ -5,7 +5,7 @@ function OuputFrame() {
     <div>
       <div
         id="pwdResult"
-        className="p-12 bg-white border-2 border-violet-300 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        className="p-12 border-2 border-violet-300 rounded-lg shadow bg-gray-800 w-[300px]"
       >
         <div id="defaultPwd">
           <span className="block mb-2 text-left text-xl font-medium text-white">

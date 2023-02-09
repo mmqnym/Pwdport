@@ -95,32 +95,18 @@ function App() {
   generatePwd(originalPwd, keyword, offset, length);
 
   return (
-    <div className="App">
-      <div className="bg-slate-800 md:w-full md:h-[100vh] flex md:flex-col md:items-center md:justify-between">
-        <div></div>
-        <div
-          id="mainFram"
-          className="flex md:flex-row md:items-center md:space-x-20 xl:space-x-32"
-        >
-          <div className="flex md:w-1/3 xl:w-[40%]">
-            <InputFrame />
-          </div>
-          <div className="">
-            <img
-              src={Logo}
-              alt="logo"
-              width={200}
-              className="animate-pulse-slow"
-            />
-          </div>
-          <div className="flex md:w-1/3 xl:w-[40%]">
-            <OuputFrame />
-          </div>
-        </div>
-        <div id="footer" className="w-full">
-          <Footer />
-        </div>
+    <div className="App box-border">
+      <div className="bg-slate-800 w-full flex justify-between items-center px-[10%] 2xl:px-[15%] py-[2.5%] h-[77vh] 2xl:h-[84vh]">
+        <InputFrame />
+        <img
+          src={Logo}
+          alt="logo"
+          width={200}
+          className="animate-pulse-slow"
+        />
+        <OuputFrame />
       </div>
+      <Footer />
     </div>
   );
 }

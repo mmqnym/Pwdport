@@ -5,7 +5,7 @@ function InputFrame() {
 
   return (
     <form>
-      <div className="p-12 border-2 rounded-lg shadow bg-gray-800 border-gray-700">
+      <div className="p-12 py-6 border-2 rounded-lg shadow bg-gray-800 border-gray-700">
         <label
           htmlFor="base-input"
           className="block mb-2 text-left text-xl font-medium text-white"
@@ -15,7 +15,7 @@ function InputFrame() {
         <input
           type="text"
           id="base-input"
-          className="block w-full mb-6 px-4 py-2 text-xl text-white border-[3px] border-violet-300 rounded-lg bg-gray-800/50 hover:bg-gray-700 focus:outline-none focus:border-violet-500/50"
+          className="block w-full mb-4 px-4 py-1 text-xl text-white border-[3px] border-violet-300 rounded-lg bg-gray-800/50 hover:bg-gray-700 focus:outline-none focus:border-violet-500/50"
         ></input>
 
         <label
@@ -27,7 +27,7 @@ function InputFrame() {
         <input
           type="text"
           id="keyword-input"
-          className="block w-full mb-6 px-4 py-2 text-xl text-white border-[3px] border-violet-300 rounded-lg bg-gray-800/50 hover:bg-gray-700 focus:outline-none focus:border-violet-500/50"
+          className="block w-full mb-4 px-4 py-1 text-xl text-white border-[3px] border-violet-300 rounded-lg bg-gray-800/50 hover:bg-gray-700 focus:outline-none focus:border-violet-500/50"
         ></input>
 
         <label
@@ -39,7 +39,7 @@ function InputFrame() {
         <input
           type="text"
           id="offset-input"
-          className="block w-full mb-6 px-4 py-2 text-xl text-white border-[3px] border-violet-300 rounded-lg bg-gray-800/50 hover:bg-gray-700 focus:outline-none focus:border-violet-500/50"
+          className="block w-full mb-4 px-4 py-1 text-xl text-white border-[3px] border-violet-300 rounded-lg bg-gray-800/50 hover:bg-gray-700 focus:outline-none focus:border-violet-500/50"
         ></input>
 
         <label
@@ -51,7 +51,7 @@ function InputFrame() {
         <input
           type="text"
           id="length-input"
-          className="block w-full mb-16 px-4 py-2 text-xl text-white border-[3px] border-violet-300 rounded-lg bg-gray-800/50 hover:bg-gray-700 focus:outline-none focus:border-violet-500/50"
+          className="block w-full mb-8 px-4 py-1 text-xl text-white border-[3px] border-violet-300 rounded-lg bg-gray-800/50 hover:bg-gray-700 focus:outline-none focus:border-violet-500/50"
         ></input>
 
         <button
