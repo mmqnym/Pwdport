@@ -3,20 +3,20 @@ import Logo from "./logo.png";
 
 function Footer() {
   return (
-    <footer className="w-full bg-gray-900 p-4 h-[23vh] 2xl:h-[16vh]">
+    <footer className="h-[23vh] w-full bg-gray-900 p-4 shadow-[0_35px_60px_-8px] shadow-cyan-100 2xl:h-[16vh]">
       <div className="flex items-center">
-        <img src={Logo} className="h-12 mr-3" alt="Pwdport Logo" />
-        <span className="self-center text-4xl font-semibold whitespace-nowrap text-white">
+        <img src={Logo} className="mr-3 h-12" alt="Pwdport Logo" />
+        <span className="self-center whitespace-nowrap text-4xl font-semibold text-white">
           Pwdport
         </span>
       </div>
-      <hr className="my-6 border border-gray-700" />
+      <hr className="mt-10 border border-gray-700" />
       <div className="flex justify-between">
-        <span className="text-md text-gray-400">
+        <span className="text-mds mt-6 text-gray-400">
           ▚ This site does not store any information that you enter.
         </span>
 
-        <div className="flex space-x-4 justify-end">
+        <div className="mr-4 mt-4 flex justify-end space-x-4">
           <a
             href="https://twitter.com/0xmimiQ"
             rel="noreferrer"
@@ -24,7 +24,7 @@ function Footer() {
             className="text-gray-500 hover:text-white"
           >
             <svg
-              className="w-10 h-10"
+              className="h-10 w-10"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true"
@@ -40,7 +40,7 @@ function Footer() {
             className="text-gray-500 hover:text-white"
           >
             <svg
-              className="w-10 h-10"
+              className="h-10 w-10"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true"

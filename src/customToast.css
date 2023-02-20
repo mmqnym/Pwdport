@@ -1,0 +1,12 @@
+:root {
+  --toastify-text-color-dark: rgb(167 139 250);
+  font-size: medium;
+  --toastify-font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  text-align: center;
+}
+
+.Toastify__toast {
+  border-radius: 7px;
+  background: rgb(17 24 39);
+}
