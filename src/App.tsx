@@ -55,7 +55,7 @@ function App() {
 
   return (
     <div className="App box-border">
-      <div className="flex w-full flex-col items-center justify-evenly space-y-8 bg-slate-800 px-[10%] py-[5%] 2xl:h-[85vh] 2xl:flex-row 2xl:gap-0">
+      <div className="flex w-full flex-col items-center justify-evenly space-y-8 bg-slate-800 px-[10%] py-[5%] 2xl:h-[85vh] 2xl:flex-row 2xl:gap-0 2xl:space-y-0">
         <InputFrame setForm={setForm} form={false} />
         <img
           src={Logo}
