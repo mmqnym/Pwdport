@@ -30,10 +30,9 @@ function App() {
     let offset = form.offset;
     let length = form.length;
 
-    // length !<= 24
-
     if (originalPwd !== "" && keyword !== "" && offset >= 0 && length !== 0) {
       setRes(generatePwd(originalPwd, keyword, offset, length));
+    } else {
     }
   }, [form]);
 

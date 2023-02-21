@@ -1,5 +1,10 @@
 import React, { SetStateAction } from "react";
 import { FormType } from "./CustomTypes";
+import { Flip, toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "./customToast.css";
+import "./inputRule";
+import inputRule from "./inputRule";
 
 interface FormComponentHookType {
   form: boolean;
@@ -7,6 +12,34 @@ interface FormComponentHookType {
 }
 
 function InputFrame({ setForm }: FormComponentHookType) {
+  const notify = (msg: string, success: boolean) => {
+    if (success) {
+      toast.success(msg, {
+        position: toast.POSITION.TOP_RIGHT,
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Flip,
+      });
+    } else {
+      toast.error(msg, {
+        position: toast.POSITION.TOP_RIGHT,
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Flip,
+      });
+    }
+  };
+
   return (
     <form autoComplete="off">
       <div className="h-[520px] w-[400px] rounded-lg border-2 border-gray-500 bg-gray-800 p-12 py-6 shadow-md shadow-violet-400">
@@ -37,7 +70,7 @@ function InputFrame({ setForm }: FormComponentHookType) {
           ></input>
         </div>
 
-        <div className="group">
+        <div className="group mb-4">
           <label
             htmlFor="offset-input"
             className="text-md mb-2 block text-left font-medium text-gray-300 duration-700 group-focus-within:translate-x-[37%] group-focus-within:text-2xl group-focus-within:text-violet-300"
@@ -45,13 +78,18 @@ function InputFrame({ setForm }: FormComponentHookType) {
             Offset
           </label>
           <input
-            type="text"
+            type="number"
+            min={0}
+            step={1}
             id="offset-input"
-            className="mb-4 block w-full rounded-md border border-gray-500/50 bg-gray-800/50 px-4 py-1 text-xl text-white shadow-[0px_-0.4px_2px_2px] shadow-violet-300/50 hover:bg-gray-700 focus:border-violet-500/75 focus:outline-none group-focus-within:ring group-focus-within:ring-violet-300"
+            className="peer block w-full rounded-md border border-gray-500/50 bg-gray-800/50 px-4 py-1 text-xl text-white shadow-[0px_-0.4px_2px_2px] shadow-violet-300/50 hover:bg-gray-700 focus:border-violet-500/75 focus:outline-none group-focus-within:ring group-focus-within:ring-violet-300"
           ></input>
+          <p className="mt-2 hidden text-left text-sm text-pink-600 peer-invalid:block">
+            The input value must be greater than 1
+          </p>
         </div>
 
-        <div className="group">
+        <div className="group mb-10">
           <label
             htmlFor="length-input"
             className="text-md mb-2 block text-left font-medium text-gray-300 duration-700 group-focus-within:translate-x-[37%] group-focus-within:text-2xl group-focus-within:text-violet-300"
@@ -60,13 +98,16 @@ function InputFrame({ setForm }: FormComponentHookType) {
           </label>
           <input
             type="number"
-            min={1}
-            max={24}
+            min={inputRule.minLength}
+            max={inputRule.maxLength}
             step={1}
-            onWheel={(event) => event.currentTarget.blur()}
             id="length-input"
-            className="mb-12 block w-full rounded-md border border-gray-500/50 bg-gray-800/50 px-4 py-1 text-xl text-white shadow-[0px_-0.4px_2px_2px] shadow-violet-300/50 hover:bg-gray-700 focus:border-violet-500/75 focus:outline-none group-focus-within:ring-violet-300"
+            className="peer block w-full rounded-md border border-gray-500/50 bg-gray-800/50 px-4 py-1 text-xl text-white shadow-[0px_-0.4px_2px_2px] shadow-violet-300/50 hover:bg-gray-700 focus:border-violet-500/75 focus:outline-none group-focus-within:ring-violet-300"
           ></input>
+          <p className="mt-2 hidden text-left text-sm text-pink-600 peer-invalid:block">
+            The input value must be between {inputRule.minLength} and{" "}
+            {inputRule.maxLength}
+          </p>
         </div>
 
         <div className="flex flex-row items-center justify-center">
@@ -93,14 +134,14 @@ function InputFrame({ setForm }: FormComponentHookType) {
               try {
                 offsetINT = parseInt(offset);
               } catch (e) {
-                console.log((e as Error).message);
+                notify((e as Error).message, false);
                 offsetINT = 0;
               }
 
               try {
                 lengthINT = parseInt(length);
               } catch (e) {
-                console.log((e as Error).message);
+                notify((e as Error).message, false);
                 lengthINT = 0;
               }
 
@@ -118,12 +159,13 @@ function InputFrame({ setForm }: FormComponentHookType) {
             }}
             className="group mb-2 mr-2 inline-flex overflow-hidden rounded-lg bg-gradient-to-br from-purple-600/50 to-cyan-500/50 p-0.5 text-lg font-medium text-white hover:text-white focus:animate-ping-slow group-hover:from-purple-600 group-hover:to-cyan-500"
           >
-            <span className="rounded-lg bg-gray-800 px-8 py-3 transition-all duration-300 ease-out group-hover:bg-opacity-0">
+            <span className="rounded-lg bg-gray-800 px-8 py-2 transition-all duration-300 ease-out group-hover:bg-opacity-0">
               Sign
             </span>
           </button>
         </div>
       </div>
+      <ToastContainer />
     </form>
   );
 }

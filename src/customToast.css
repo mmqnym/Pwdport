@@ -1,5 +1,6 @@
 :root {
   --toastify-text-color-dark: rgb(167 139 250);
+  --toastify-color-progress-success: #bb86fc;
   font-size: medium;
   --toastify-font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;

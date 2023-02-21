@@ -34,7 +34,7 @@ function Footer() {
             <span className="sr-only">Twitter page</span>
           </a>
           <a
-            href="https://github.com/0xmimiQ"
+            href="https://github.com/0xmimiQ/PwdPort"
             rel="noreferrer"
             target="_blank"
             className="text-gray-500 hover:text-white"

@@ -6,18 +6,32 @@ import "react-toastify/dist/ReactToastify.css";
 import "./customToast.css";
 
 function OuputFrame(props: EncodeResultType) {
-  const notify = (msg: string) => {
-    toast(msg, {
-      position: toast.POSITION.TOP_RIGHT,
-      autoClose: 1500,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-      transition: Flip,
-    });
+  const notify = (msg: string, success: boolean) => {
+    if (success) {
+      toast.success(msg, {
+        position: toast.POSITION.TOP_RIGHT,
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Flip,
+      });
+    } else {
+      toast.error(msg, {
+        position: toast.POSITION.TOP_RIGHT,
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Flip,
+      });
+    }
   };
 
   const handleCopy = async (text: string) => {
@@ -25,9 +39,9 @@ function OuputFrame(props: EncodeResultType) {
 
     try {
       await navigator.clipboard.writeText(text);
-      notify("Copied!");
+      notify("Password is copied!", true);
     } catch (e) {
-      notify((e as Error).message);
+      notify((e as Error).message, false);
     }
   };
 
@@ -37,7 +51,7 @@ function OuputFrame(props: EncodeResultType) {
       className="h-[520px] w-[400px] rounded-lg border-2 border-violet-300 bg-gray-800 p-8 shadow-md shadow-cyan-100"
     >
       <div className="flex flex-row justify-center gap-2">
-        <img src={Logo} width={30}></img>
+        <img src={Logo} alt="logo" width={30}></img>
         <h1 className="block cursor-default text-3xl font-medium text-white">
           PwdPort
         </h1>
