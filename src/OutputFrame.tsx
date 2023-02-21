@@ -26,7 +26,7 @@ function OuputFrame(props: EncodeResultType) {
       <div className="flex flex-row justify-center gap-2">
         <img src={Logo} alt="logo" width={30}></img>
         <h1 className="block cursor-default text-3xl font-medium text-white">
-          PwdPort
+          Pwdort
         </h1>
       </div>
       <div className="relative cursor-default py-4">
