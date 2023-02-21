@@ -53,6 +53,8 @@ function InputFrame({ setForm }: FormComponentHookType) {
             type="number"
             min={0}
             step={1}
+            pattern="\d*"
+            inputMode="numeric"
             id="offset-input"
             className="peer block w-full rounded-md border border-gray-500/50 bg-gray-800/50 px-4 py-1 text-xl text-white shadow-[0px_-0.4px_2px_2px] shadow-violet-300/50 hover:bg-gray-700 focus:border-violet-500/75 focus:outline-none group-focus-within:ring group-focus-within:ring-violet-300"
           ></input>
@@ -73,6 +75,8 @@ function InputFrame({ setForm }: FormComponentHookType) {
             min={inputRule.minLength}
             max={inputRule.maxLength}
             step={1}
+            pattern="\d*"
+            inputMode="numeric"
             id="length-input"
             className="peer block w-full rounded-md border border-gray-500/50 bg-gray-800/50 px-4 py-1 text-xl text-white shadow-[0px_-0.4px_2px_2px] shadow-violet-300/50 hover:bg-gray-700 focus:border-violet-500/75 focus:outline-none group-focus-within:ring-violet-300"
           ></input>
