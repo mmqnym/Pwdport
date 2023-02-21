@@ -3,28 +3,28 @@ import Logo from "./logo.png";
 
 function Footer() {
   return (
-    <footer className="w-full bg-gray-900 p-4 shadow-[0_35px_60px_-8px] shadow-cyan-100 2xl:h-[15vh]">
+    <footer className="w-full bg-gray-900 p-4 shadow-[0_35px_60px_-8px] shadow-cyan-100 2xl:h-[16vh]">
       <div className="flex items-center">
-        <img src={Logo} className="mr-3 h-12" alt="Pwdport Logo" />
+        <img src={Logo} className="mr-3 h-10 md:h-12" alt="Pwdport Logo" />
         <span className="self-center whitespace-nowrap text-4xl font-semibold text-white">
           Pwdport
         </span>
       </div>
-      <hr className="mt-10 border border-gray-700" />
+      <hr className="mt-4 border border-gray-700 md:mt-8" />
       <div className="flex justify-between">
-        <span className="text-mds mt-6 text-gray-400">
+        <span className="mt-6 text-left text-sm text-gray-400 md:text-lg">
           ▚ This site does not store any information that you enter.
         </span>
 
-        <div className="mr-4 mt-4 flex justify-end space-x-4">
+        <div className="mr-2 flex justify-end space-x-2 md:mr-4 md:space-x-2">
           <a
             href="https://twitter.com/0xmimiQ"
             rel="noreferrer"
             target="_blank"
-            className="text-gray-500 hover:text-white"
+            className="mt-6 text-gray-500 hover:text-white md:mt-4"
           >
             <svg
-              className="h-10 w-10"
+              className="h-6 w-6 md:h-10 md:w-10"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true"
@@ -37,10 +37,10 @@ function Footer() {
             href="https://github.com/0xmimiQ/PwdPort"
             rel="noreferrer"
             target="_blank"
-            className="text-gray-500 hover:text-white"
+            className="mt-6 text-gray-500 hover:text-white md:mt-4"
           >
             <svg
-              className="h-10 w-10"
+              className="h-6 w-6 md:h-10 md:w-10"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true"
