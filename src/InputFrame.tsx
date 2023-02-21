@@ -1,9 +1,9 @@
 import React, { SetStateAction } from "react";
 import { FormType } from "./CustomTypes";
-import { Flip, toast, ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
+import { notify } from "./customToastEmitter";
 import "react-toastify/dist/ReactToastify.css";
 import "./customToast.css";
-import "./inputRule";
 import inputRule from "./inputRule";
 
 interface FormComponentHookType {
@@ -12,37 +12,9 @@ interface FormComponentHookType {
 }
 
 function InputFrame({ setForm }: FormComponentHookType) {
-  const notify = (msg: string, success: boolean) => {
-    if (success) {
-      toast.success(msg, {
-        position: toast.POSITION.TOP_RIGHT,
-        autoClose: 1500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-        transition: Flip,
-      });
-    } else {
-      toast.error(msg, {
-        position: toast.POSITION.TOP_RIGHT,
-        autoClose: 1500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-        transition: Flip,
-      });
-    }
-  };
-
   return (
-    <form autoComplete="off">
-      <div className="h-[520px] w-[400px] rounded-lg border-2 border-gray-500 bg-gray-800 p-12 py-6 shadow-md shadow-violet-400">
+    <div className="h-[520px] w-[400px] rounded-lg border-2 border-gray-500 bg-gray-800 p-12 py-6 shadow-md shadow-violet-400">
+      <form autoComplete="off">
         <div className="group">
           <label
             htmlFor="base-input"
@@ -164,9 +136,9 @@ function InputFrame({ setForm }: FormComponentHookType) {
             </span>
           </button>
         </div>
-      </div>
+      </form>
       <ToastContainer />
-    </form>
+    </div>
   );
 }
 

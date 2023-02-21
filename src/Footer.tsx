@@ -3,7 +3,7 @@ import Logo from "./logo.png";
 
 function Footer() {
   return (
-    <footer className="h-[23vh] w-full bg-gray-900 p-4 shadow-[0_35px_60px_-8px] shadow-cyan-100 2xl:h-[16vh]">
+    <footer className="h-[16vh] w-full bg-gray-900 p-4 shadow-[0_35px_60px_-8px] shadow-cyan-100 2xl:h-[16vh]">
       <div className="flex items-center">
         <img src={Logo} className="mr-3 h-12" alt="Pwdport Logo" />
         <span className="self-center whitespace-nowrap text-4xl font-semibold text-white">

@@ -1,39 +1,12 @@
 import React from "react";
 import { EncodeResultType } from "./CustomTypes";
 import Logo from "./logo.png";
-import { Flip, toast, ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
+import { notify } from "./customToastEmitter";
 import "react-toastify/dist/ReactToastify.css";
 import "./customToast.css";
 
 function OuputFrame(props: EncodeResultType) {
-  const notify = (msg: string, success: boolean) => {
-    if (success) {
-      toast.success(msg, {
-        position: toast.POSITION.TOP_RIGHT,
-        autoClose: 1500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-        transition: Flip,
-      });
-    } else {
-      toast.error(msg, {
-        position: toast.POSITION.TOP_RIGHT,
-        autoClose: 1500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-        transition: Flip,
-      });
-    }
-  };
-
   const handleCopy = async (text: string) => {
     if (text === "") return;
 
