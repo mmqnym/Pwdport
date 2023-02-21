@@ -13,12 +13,12 @@ interface FormComponentHookType {
 
 function InputFrame({ setForm }: FormComponentHookType) {
   return (
-    <div className="h-[520px] w-[400px] rounded-lg border-2 border-gray-500 bg-gray-800 p-12 py-6 shadow-md shadow-violet-400">
+    <div className="w-[270px] rounded-lg border-2 border-gray-500 bg-gray-800 p-12 py-6 shadow-md shadow-violet-400 md:w-[330px] 2xl:h-[500px] 2xl:w-[350px]">
       <form autoComplete="off">
         <div className="group">
           <label
             htmlFor="base-input"
-            className="text-md mb-2 block text-left font-medium text-gray-300 duration-700 group-focus-within:translate-x-[40%] group-focus-within:text-2xl group-focus-within:text-violet-300"
+            className="text-md mb-2 block text-left font-medium text-gray-300 duration-700 group-focus-within:translate-x-[33%] group-focus-within:text-2xl group-focus-within:text-violet-300 md:group-focus-within:translate-x-[37%] 2xl:group-focus-within:translate-x-[40%]"
           >
             Base
           </label>
@@ -31,7 +31,7 @@ function InputFrame({ setForm }: FormComponentHookType) {
         <div className="group">
           <label
             htmlFor="keyword-input"
-            className="text-md mb-2 block text-left font-medium text-gray-300 duration-700 group-focus-within:translate-x-[34%] group-focus-within:text-2xl group-focus-within:text-violet-300"
+            className="text-md mb-2 block text-left font-medium text-gray-300 duration-700 group-focus-within:translate-x-[22%] group-focus-within:text-2xl group-focus-within:text-violet-300 md:group-focus-within:translate-x-[27%] 2xl:group-focus-within:translate-x-[31%]"
           >
             Keyword
           </label>
@@ -45,7 +45,7 @@ function InputFrame({ setForm }: FormComponentHookType) {
         <div className="group mb-4">
           <label
             htmlFor="offset-input"
-            className="text-md mb-2 block text-left font-medium text-gray-300 duration-700 group-focus-within:translate-x-[37%] group-focus-within:text-2xl group-focus-within:text-violet-300"
+            className="text-md mb-2 block text-left font-medium text-gray-300 duration-700 group-focus-within:translate-x-[27%] group-focus-within:text-2xl group-focus-within:text-violet-300 md:group-focus-within:translate-x-[33%] 2xl:group-focus-within:translate-x-[35%]"
           >
             Offset
           </label>
@@ -64,7 +64,7 @@ function InputFrame({ setForm }: FormComponentHookType) {
         <div className="group mb-10">
           <label
             htmlFor="length-input"
-            className="text-md mb-2 block text-left font-medium text-gray-300 duration-700 group-focus-within:translate-x-[37%] group-focus-within:text-2xl group-focus-within:text-violet-300"
+            className="text-md mb-2 block text-left font-medium text-gray-300 duration-700 group-focus-within:translate-x-[27%] group-focus-within:text-2xl group-focus-within:text-violet-300 md:group-focus-within:translate-x-[33%] 2xl:group-focus-within:translate-x-[35%]"
           >
             Length
           </label>

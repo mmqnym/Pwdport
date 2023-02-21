@@ -21,7 +21,7 @@ function OuputFrame(props: EncodeResultType) {
   return (
     <div
       id="pwdResult"
-      className="h-[520px] w-[400px] rounded-lg border-2 border-violet-300 bg-gray-800 p-8 shadow-md shadow-cyan-100"
+      className="w-[270px] rounded-lg border-2 border-violet-300 bg-gray-800 p-8 shadow-md shadow-cyan-100 md:w-[330px] lg:h-[500px] 2xl:h-[500px] 2xl:w-[350px]"
     >
       <div className="flex flex-row justify-center gap-2">
         <img src={Logo} alt="logo" width={30}></img>
