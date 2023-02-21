@@ -37,8 +37,6 @@
 
 ## 相關參考
 
-### - Client
-
 - [**React**](https://reactjs.org/)
 - [**Tailwindcss**](https://tailwindcss.com/docs/installation)
 - [**SHA3 online tools**](https://github.com/emn178/js-sha3)

@@ -37,8 +37,6 @@ The information entered by the user is first hashed by Keccak256 and then mixed 
 
 ## Reference
 
-### - Client
-
 - [**React**](https://reactjs.org/)
 - [**Tailwindcss**](https://tailwindcss.com/docs/installation)
 - [**SHA3 online tools**](https://github.com/emn178/js-sha3)
