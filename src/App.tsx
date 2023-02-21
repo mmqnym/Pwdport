@@ -45,7 +45,7 @@ function App() {
         resRef.current!.scrollIntoView({ behavior: "smooth" });
       }
     } else {
-      if (didmount < 2) {
+      if (didmount < 1) {
         didmount++;
       } else {
         notify("Refusal to issue", false);
